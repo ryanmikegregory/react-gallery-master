@@ -3,15 +3,18 @@ import React, { Component } from 'react';
 class GalleryList extends Component {
   render() {
     // console.log(this.props.galleryList);
-    const displayImage = this.props.galleryList.map((item, index) => {
-      return <div key={item.id}> <img src= {item.path} alt="imageDiv" /></div>
+    const displayImages = this.props.galleryList.map((item, index) => {
+      return (
+        <div key={item.id}>
+          {' '}
+          <img src={item.path} alt="imageDiv" />
+        </div>
+      );
     });
 
     return (
       <div>
-        <h1>Test</h1>
-        <div>{displayImage}</div>
-        <img src="images/goat_small.jpg"/>
+        <div>{displayImages}</div>
       </div>
     );
   }
@@ -32,4 +35,3 @@ export default GalleryList;
 // const displayImage = this.props.galleryList.map((item, index) => {
 //   return <div key={item.id}> {item.path}</div>;
 // });
-
