@@ -14,7 +14,7 @@ class GalleryList extends Component {
 
     return (
       <div className={styles.box}>
-        <div>{displayImages}</div>
+        {displayImages}
       </div>
     );
   }
