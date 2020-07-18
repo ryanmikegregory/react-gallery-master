@@ -44,6 +44,9 @@ class App extends Component {
         </div>
       );
     });
+    //
+    console.log(this.state.galleryItems);
+    //
     return (
       <div className="App">
         <header className="App-header">
@@ -53,7 +56,7 @@ class App extends Component {
         <p>Gallery goes here</p>
         <GalleryList />
         {/* <img src="images/goat_small.jpg" alt="this is an" /> */}
-        <ul>{displayGallery}</ul>
+        <li>{displayGallery}</li>
       </div>
     );
   }
