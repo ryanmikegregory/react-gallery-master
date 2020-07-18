@@ -38,7 +38,11 @@ class App extends Component {
   }
   render() {
     const displayGallery = this.state.galleryItems.map((item, index) => {
-      return <div key={index}>Thingys</div>;
+      return (
+        <div key={item.id}>
+          {item.title} {item.description} {item.path} {item.likes}
+        </div>
+      );
     });
     return (
       <div className="App">
