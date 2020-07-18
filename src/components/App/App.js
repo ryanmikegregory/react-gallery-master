@@ -6,6 +6,8 @@ import GalleryList from '../GalleryList/GalleryList';
 class App extends Component {
   state = {
     galleryItems: [
+
+      
       // {
       //   id: 0,
       //   title: '',
@@ -54,8 +56,9 @@ class App extends Component {
         </header>
         <br />
         <p>Gallery goes here</p>
-        <GalleryList />
+        <GalleryList galleryList={this.state.galleryItems} />
         {/* <img src="images/goat_small.jpg" alt="this is an" /> */}
+
         <li>{displayGallery}</li>
       </div>
     );
