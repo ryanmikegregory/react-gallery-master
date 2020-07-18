@@ -18,10 +18,10 @@ class App extends Component {
 
   componentDidMount() {
     console.log('We did da Mount!');
-    this.getData();
+    this.getGalleryData();
   }
 
-  getData() {
+  getGalleryData() {
     axios({
       method: 'GET',
       url: '/gallery',
@@ -46,6 +46,7 @@ class App extends Component {
         <p>Gallery goes here</p>
         <GalleryList />
         {/* <img src="images/goat_small.jpg" alt="this is an" /> */}
+        <ul></ul>
       </div>
     );
   }
