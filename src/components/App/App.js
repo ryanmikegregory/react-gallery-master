@@ -18,7 +18,23 @@ class App extends Component {
 
   componentDidMount() {
     console.log('We did da Mount!');
-    //   this.getData();
+    this.getData();
+  }
+
+  getData() {
+    axios({
+      method: 'GET',
+      url: '/gallery',
+    })
+      .then((response) => {
+        console.log('Response:', response.data);
+        this.setState({
+          galleryItems: response.data,
+        });
+      })
+      .catch((error) => {
+        alert('Error in GET-Client', error);
+      });
   }
   render() {
     return (
