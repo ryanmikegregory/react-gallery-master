@@ -4,17 +4,17 @@ import axios from 'axios';
 import GalleryList from '../GalleryList/GalleryList';
 
 class App extends Component {
-  // state = {
-  //   galleryItems: [
-  //     {
-  //       id: 0,
-  //       title: '',
-  //       description: '',
-  //       path: '',
-  //       likes: 0,
-  //     },
-  //   ],
-  // };
+  state = {
+    galleryItems: [
+      // {
+      //   id: 0,
+      //   title: '',
+      //   description: '',
+      //   path: '',
+      //   likes: 0,
+      // },
+    ],
+  };
 
   componentDidMount() {
     console.log('We did da Mount!');
@@ -37,6 +37,9 @@ class App extends Component {
       });
   }
   render() {
+    const displayGallery = this.state.galleryItems.map((item, index) => {
+      return <div key={index}>Thingys</div>;
+    });
     return (
       <div className="App">
         <header className="App-header">
@@ -46,7 +49,7 @@ class App extends Component {
         <p>Gallery goes here</p>
         <GalleryList />
         {/* <img src="images/goat_small.jpg" alt="this is an" /> */}
-        <ul></ul>
+        <ul>{displayGallery}</ul>
       </div>
     );
   }
