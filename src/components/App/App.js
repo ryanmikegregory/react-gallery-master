@@ -39,16 +39,6 @@ class App extends Component {
       });
   }
   render() {
-    const displayGallery = this.state.galleryItems.map((item, index) => {
-      return (
-        <div key={item.id}>
-          {item.title} {item.description} {item.path} {item.likes}
-        </div>
-      );
-    });
-    //
-    console.log(this.state.galleryItems);
-    //
     return (
       <div className="App">
         <header className="App-header">
@@ -56,10 +46,8 @@ class App extends Component {
         </header>
         <br />
         <p>Gallery goes here</p>
-        <GalleryList galleryList={this.state.galleryItems} />
-        {/* <img src="images/goat_small.jpg" alt="this is an" /> */}
-
-        <li>{displayGallery}</li>
+        <GalleryList galleryList={this.state.galleryItems}/>
+        
       </div>
     );
   }
