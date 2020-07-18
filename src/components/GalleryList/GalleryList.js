@@ -4,13 +4,14 @@ class GalleryList extends Component {
   render() {
     // console.log(this.props.galleryList);
     const displayImage = this.props.galleryList.map((item, index) => {
-      return <div key={item.id}> {item.path}</div>;
+      return <div key={item.id}> <img src= {item.path} alt="imageDiv" /></div>
     });
 
     return (
       <div>
         <h1>Test</h1>
-        {displayImage}
+        <div>{displayImage}</div>
+        <img src="images/goat_small.jpg"/>
       </div>
     );
   }
@@ -27,3 +28,8 @@ export default GalleryList;
 // <GalleryList galleryList={this.state.galleryItems} />
 
 // <li>{displayGallery}</li>
+
+// const displayImage = this.props.galleryList.map((item, index) => {
+//   return <div key={item.id}> {item.path}</div>;
+// });
+
