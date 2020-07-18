@@ -1,9 +1,9 @@
 const galleryItems = [
   {
     id: 1,
-    title: 'Goatster',
-    description: 'Photo of a goat taken at Glacier National Park.',
-    path: './images/goat_small.jpg',
+    title: 'Treee of Solitude',
+    description: 'Photo of a tree in a field.',
+    path: './images/solitude.png',
     likes: 0,
   },
   {
