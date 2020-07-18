@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styles from './GalleryList.module.css';
 
 class GalleryList extends Component {
   render() {
@@ -6,14 +7,13 @@ class GalleryList extends Component {
     const displayImages = this.props.galleryList.map((item, index) => {
       return (
         <div key={item.id}>
-          {' '}
-          <img src={item.path} alt="imageDiv" />
+          <img src={item.path} alt="imageDiv" className="img" />
         </div>
       );
     });
 
     return (
-      <div>
+      <div className={styles.box}>
         <div>{displayImages}</div>
       </div>
     );
