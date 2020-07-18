@@ -4,17 +4,17 @@ import axios from 'axios';
 import GalleryList from '../GalleryList/GalleryList';
 
 class App extends Component {
-  state = {
-    galleryItems: [
-      {
-        id: 0,
-        title: '',
-        description: '',
-        path: '',
-        likes: 0,
-      },
-    ],
-  };
+  // state = {
+  //   galleryItems: [
+  //     {
+  //       id: 0,
+  //       title: '',
+  //       description: '',
+  //       path: '',
+  //       likes: 0,
+  //     },
+  //   ],
+  // };
 
   componentDidMount() {
     console.log('We did da Mount!');
