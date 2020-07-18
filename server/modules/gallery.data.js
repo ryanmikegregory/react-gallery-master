@@ -28,6 +28,20 @@ const galleryItems = [
     path: 'images/kind_human.png',
     likes: 0,
   },
+  {
+    id: 5,
+    title: 'Music',
+    description: 'Musical Headphones',
+    path: 'images/music_hp.png',
+    likes: 0,
+  },
+  {
+    id: 6,
+    title: 'Mini Code',
+    description: 'Code',
+    path: 'images/coding.png',
+    likes: 0,
+  },
 ];
 
 module.exports = galleryItems;
