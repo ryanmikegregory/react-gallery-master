@@ -1,18 +1,13 @@
 import React, { Component } from 'react';
-import styles from '../GalleryList/GalleryList.module.css';
+import GalleryItem from '../GalleryItem/GalleryItem';
 
-export class GalleryList extends Component {
+class GalleryList extends Component {
   render() {
-    const itemsArray = this.props.galleryList.map((item, index) => {
-      return (
-        <div key={index} className={styles.box}>
-          <li key={index}>
-            <img key={index} src={item.path} alt="pic from array"></img>
-          </li>
-        </div>
-      );
+    const galleryArray = this.props.galleryList.map((item, index) => {
+      return <GalleryItem key={index} item={item} />;
     });
-    return <div>{itemsArray}</div>;
+
+    return <div>{galleryArray}</div>;
   }
 }
 

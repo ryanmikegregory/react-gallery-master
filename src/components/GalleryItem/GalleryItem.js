@@ -1,38 +1,17 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-export class GalleryItem extends Component {
+class GalleryItem extends Component {
   render() {
     return (
       <div>
-        
+        <img src={this.props.item.path} alt="alternate"></img>
+        <div>
+          <button>LIKE</button>
+        </div>
+        <p>This Many People Have Liked This: 0</p>
       </div>
-    )
+    );
   }
 }
 
-export default GalleryItem
-
-
-
-
-
-// import React, { Component } from 'react';
-// import styles from '../GalleryItem/GalleryItem.module.css';
-
-// export class GalleryItem extends Component {
-//   render() {
-//     console.log(this.props.galleryItem);
-//     return (
-//       <div>
-//         <li key={this.props.galleryItem.id} className={styles.list}>
-//           <img src={this.props.galleryItem.path} alt="arrayImage" />
-//           <div>
-//             <button>I Like It!</button>
-//           </div>
-//         </li>
-//       </div>
-//     );
-//   }
-// }
-
-// export default GalleryItem;
+export default GalleryItem;
