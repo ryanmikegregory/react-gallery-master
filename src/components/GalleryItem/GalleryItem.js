@@ -9,7 +9,7 @@ class GalleryItem extends Component {
         <div>
           <button>LIKE</button>
         </div>
-        <p>This Many People Have Liked This: 0</p>
+        <p>Likes: 0</p>
       </div>
     );
   }
