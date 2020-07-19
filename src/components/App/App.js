@@ -35,6 +35,7 @@ class App extends Component {
   }
 
   updateLikes = (id) => (event) => {
+    event.preventDefault();
     console.log('Btn id:', id);
     axios({
       method: 'PUT',

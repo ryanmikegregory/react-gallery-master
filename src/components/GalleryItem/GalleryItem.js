@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
 import './GalleryItem.css';
+import GalleryImage from '../GalleryImage/GalleryImage';
 
 class GalleryItem extends Component {
   render() {
     return (
       <div className="box">
-        <img src={this.props.item.path} alt="alternate"></img>
+        <h3>{this.props.item.title}</h3>
+        <GalleryImage
+          img={this.props.item.path}
+          // description={this.props.description}
+        />
+
         <p>{this.props.item.description}</p>
         <div>
           <button
@@ -15,7 +21,6 @@ class GalleryItem extends Component {
             LIKE
           </button>
           <p>Likes: {this.props.item.likes}</p>
-          
         </div>
       </div>
     );
