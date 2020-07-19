@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
 import GalleryList from '../GalleryList/GalleryList';
+import GalleryItem from '../GalleryItem/GalleryItem';
 
 class App extends Component {
   state = {
-    galleryItems: [
+    galleryItemsArray: [
       // {
       //   id: 0,
       //   title: '',
@@ -29,7 +30,7 @@ class App extends Component {
       .then((response) => {
         console.log('Response:', response.data);
         this.setState({
-          galleryItems: response.data,
+          galleryItemsArray: response.data,
         });
       })
       .catch((error) => {
@@ -44,7 +45,8 @@ class App extends Component {
         </header>
         <br />
         <p>Gallery goes here</p>
-        <GalleryList galleryList={this.state.galleryItems} />
+        <GalleryList galleryList={this.state.galleryItemsArray} />
+        <GalleryItem galleryItem={this.state.galleryItemsArray} />
       </div>
     );
   }
