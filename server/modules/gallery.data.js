@@ -42,6 +42,20 @@ const galleryItems = [
     path: 'images/coding.png',
     likes: 0,
   },
+  {
+    id: 7,
+    title: 'Live Music',
+    description: 'Foo Fighter Show',
+    path: 'images/live_music.png',
+    likes: 0,
+  },
+  {
+    id: 8,
+    title: 'Traveling',
+    description: 'Plane Port View While Landing',
+    path: 'images/plane_window.png',
+    likes: 0,
+  },
 ];
 
 module.exports = galleryItems;
