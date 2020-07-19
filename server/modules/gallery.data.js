@@ -1,14 +1,14 @@
 const galleryItems = [
   {
     id: 1,
-    title: 'Tree of Solitude',
+    title: 'Solitude Recharge',
     description: 'Tree In A Field',
     path: './images/solitude.png',
     likes: 0,
   },
   {
     id: 2,
-    title: 'Butterfly Hand',
+    title: 'Helping & Working Hard',
     description: 'Butterfly In Hand',
     path: 'images/butterfly_hand.png',
     likes: 0,
@@ -23,8 +23,8 @@ const galleryItems = [
 
   {
     id: 4,
-    title: 'Be A Kind Human',
-    description: 'Simplest Way To Change The World',
+    title: 'Being Kind',
+    description: 'Change The World',
     path: 'images/kind_human.png',
     likes: 0,
   },
@@ -52,7 +52,7 @@ const galleryItems = [
   {
     id: 8,
     title: 'Traveling',
-    description: 'Plane Port View While Landing',
+    description: 'Port View While Landing',
     path: 'images/plane_window.png',
     likes: 0,
   },

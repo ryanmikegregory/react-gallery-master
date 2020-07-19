@@ -6,7 +6,7 @@ class GalleryItem extends Component {
   render() {
     return (
       <div className="box">
-        <h3>{this.props.item.title}</h3>
+        <h4>{this.props.item.title}</h4>
         <GalleryImage
           img={this.props.item.path}
           // description={this.props.description}

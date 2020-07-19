@@ -34,8 +34,7 @@ class GalleryImage extends Component {
     }
     return (
       <div>
-          <div
-        onClick={this.toggleImageDescription}></div>
+        <div onClick={this.toggleImageDescription}></div>
         {el}
       </div>
     );
