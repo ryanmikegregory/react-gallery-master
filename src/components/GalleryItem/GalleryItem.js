@@ -3,23 +3,15 @@ import React, { Component } from 'react';
 class GalleryItem extends Component {
   render() {
     console.log(this.props.galleryItem);
-    const individualLoop = this.props.galleryItem.map((item, index) => {
-      return (
-        <div key={item.id}>
-          {/* {item.title} 
-          {item.description}  */}
-          {/* {item.path}  */}
-          <img src={item.path} alt="imageDiv" className="img" />
-          {/* {item.likes} */}
-        </div>
-      );
-    });
-
+    // const individualLoop = this.props.galleryItem.map((item) => {
+    // return <div key={item.id}></div>;
     return (
-      <div>
-        <h1>TestTEster</h1>
-        {individualLoop}
-      </div>
+      <li>
+        {this.props.galleryItem.map((item) => (
+          // <li key={item.id}>
+          <img key={item.id} src={item.path} alt="imageDiv" className="img" />
+        ))}
+      </li>
     );
   }
 }
