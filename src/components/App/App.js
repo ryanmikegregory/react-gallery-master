@@ -5,15 +5,7 @@ import GalleryList from '../GalleryList/GalleryList';
 
 class App extends Component {
   state = {
-    galleryItemsArray: [
-      // {
-      //   id: 0,
-      //   title: '',
-      //   description: '',
-      //   path: '',
-      //   likes: 0,
-      // },
-    ],
+    galleryItemsArray: [],
   };
 
   componentDidMount() {
@@ -28,9 +20,14 @@ class App extends Component {
     })
       .then((response) => {
         console.log('Response:', response.data);
-        this.setState({
-          galleryItemsArray: response.data,
-        });
+        this.setState(
+          {
+            galleryItemsArray: response.data,
+          },
+          () => {
+            console.log(this.state);
+          }
+        );
       })
       .catch((error) => {
         alert('Error in GET-Client', error);
@@ -44,6 +41,7 @@ class App extends Component {
         </header>
         <br />
         <div className="container">
+          <h1>Gallery</h1>
           <GalleryList galleryList={this.state.galleryItemsArray} />
         </div>
       </div>
