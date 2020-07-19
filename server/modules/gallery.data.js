@@ -56,6 +56,13 @@ const galleryItems = [
     path: 'images/plane_window.png',
     likes: 0,
   },
+  {
+    id: 9,
+    title: 'Heart & Mind',
+    description: 'Connecting Heart & Mind',
+    path: 'images/heart_mind.png',
+    likes: 0,
+  },
 ];
 
 module.exports = galleryItems;
