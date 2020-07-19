@@ -1,16 +1,6 @@
 .box {
-    box-shadow: 3px 3px 6px rgb(0, 0, 0, 0.3);
-    width: 75%;
-    margin: auto;
-    padding: 15px;
-}
-
-/* .box+.box {
     margin-top: 20px;
-} */
-
-/* .box>* {
     display: inline-block;
     padding: 10px;
     vertical-align: middle;
-} */
+}
