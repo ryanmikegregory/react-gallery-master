@@ -6,7 +6,7 @@ export class GalleryItem extends Component {
     console.log(this.props.galleryItem);
     return (
       <div>
-        <li className={styles.list}>
+        <li key={this.props.galleryItem.id} className={styles.list}>
           <img src={this.props.galleryItem.path} alt="arrayImage" />
           <div>
             <button>I Like It!</button>{' '}
