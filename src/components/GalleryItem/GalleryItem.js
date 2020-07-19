@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import './GalleryItem.css';
 
 class GalleryItem extends Component {
   render() {
     return (
-      <div>
+      <div className="box">
         <img src={this.props.item.path} alt="alternate"></img>
         <div>
           <button>LIKE</button>
