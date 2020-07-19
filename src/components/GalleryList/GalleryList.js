@@ -2,9 +2,19 @@ import React, { Component } from 'react';
 
 export class GalleryList extends Component {
   render() {
+    const itemsArray = this.props.galleryList.map((item, index) => {
+      return (
+          <div key={index}>
+          <li key={index}>
+          <img key={index} src={item.path} alt="pic from array"></img>
+          </li>
+          </div>
+        
+      );
+    });
     return (
       <div>
-        <p>Hello</p>
+        {itemsArray}
       </div>
     );
   }
@@ -12,20 +22,3 @@ export class GalleryList extends Component {
 
 export default GalleryList;
 
-// import React, { Component } from 'react';
-// import GalleryItem from '../GalleryItem/GalleryItem';
-// import styles from '../GalleryList/GalleryList.module.css';
-
-// class GalleryList extends Component {
-//   render() {
-//     console.log(this.props.galleryList);
-
-//     return this.props.galleryList.map((galleryItem) => (
-//       <div className={styles.box}>
-//         <GalleryItem key={galleryItem.id} galleryItem={galleryItem} />
-//       </div>
-//     ));
-//   }
-// }
-
-// export default GalleryList;
