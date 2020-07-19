@@ -33,6 +33,11 @@ class App extends Component {
         alert('Error in GET-Client', error);
       });
   }
+
+  updateLikes = (id) => (event) => {
+    console.log(id);
+  };
+
   render() {
     return (
       <div className="App">
@@ -42,7 +47,10 @@ class App extends Component {
         <br />
         <div className="container">
           <h1>Gallery</h1>
-          <GalleryList galleryList={this.state.galleryItemsArray} />
+          <GalleryList
+            galleryList={this.state.galleryItemsArray}
+            updateLikes={this.updateLikes}
+          />
         </div>
       </div>
     );
