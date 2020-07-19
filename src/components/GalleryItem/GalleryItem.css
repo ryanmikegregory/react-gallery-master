@@ -6,3 +6,8 @@
     /* border: 1px black solid; */
     /* list-style: none; */
 }
+
+.likeBtn {
+    margin-top: 10px;
+    cursor: grabbing;
+}

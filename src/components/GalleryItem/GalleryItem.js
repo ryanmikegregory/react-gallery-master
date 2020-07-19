@@ -7,11 +7,11 @@ class GalleryItem extends Component {
       <div className="box">
         <img src={this.props.item.path} alt="alternate"></img>
         <div>
-          <button onClick={this.props.updateLikes(this.props.item.id)}>
+          <button className="likeBtn" onClick={this.props.updateLikes(this.props.item.id)}>
             LIKE
           </button>
         </div>
-        <p>Likes: 0</p>
+        <p>Likes: {this.props.item.likes}</p>
       </div>
     );
   }

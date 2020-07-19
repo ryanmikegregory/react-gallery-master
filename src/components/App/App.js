@@ -19,7 +19,7 @@ class App extends Component {
       url: '/gallery',
     })
       .then((response) => {
-        console.log('Response:', response.data);
+        console.log('GET Response:', response.data);
         this.setState(
           {
             galleryItemsArray: response.data,
@@ -41,6 +41,7 @@ class App extends Component {
       url: `gallery/like/${id}`,
     })
       .then((response) => {
+        console.log('PUT Response;', response.statusText);
         this.getGalleryData();
       })
       .catch((error) => {
