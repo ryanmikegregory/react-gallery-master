@@ -30,12 +30,22 @@ class App extends Component {
         );
       })
       .catch((error) => {
-        alert('Error in GET-Client', error);
+        alert('Error in GET', error);
       });
   }
 
   updateLikes = (id) => (event) => {
-    console.log(id);
+    console.log('Btn id:', id);
+    axios({
+      method: 'PUT',
+      url: `gallery/like/${id}`,
+    })
+      .then((response) => {
+        this.getGalleryData();
+      })
+      .catch((error) => {
+        alert('Error in PUT', error);
+      });
   };
 
   render() {
