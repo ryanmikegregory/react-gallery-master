@@ -3,14 +3,33 @@ import './GalleryItem.css';
 // import Button from 'react-bootstrap/Button';
 
 class GalleryItem extends Component {
+  state = {
+    isCLicked: false,
+  };
+
+  toggleImageDesc (event) {
+
+    console.log("CLICKITY");
+  }
   render() {
+    let displayedState = this.state;
+    console.log(displayedState);
+
+    if (this.state.isCLicked === !false) {
+      displayedState = <p>{this.props.item.description}TESTitemDesc</p>;
+    } else {
+      displayedState = (
+        <img src={this.props.item.path} alt={this.props.item.description} />
+      );
+    }
+
+    console.log(this.props);
     return (
       <div className="box">
-        <h4>{this.props.item.title}</h4>
-
-        <img src={this.props.item.path} alt={this.props.item.description}></img>
-
-        <p>{this.props.item.description}</p>
+        <h6>{this.props.item.title}</h6>
+        <div>
+          <button onClick={this.toggleImageDesc}>{displayedState}</button>
+        </div>
         <div>
           <button
             className="likeBtn btn"
