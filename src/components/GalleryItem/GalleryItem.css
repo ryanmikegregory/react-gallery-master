@@ -1,14 +1,20 @@
 .box {
-    margin-top: 20px;
-    display: inline-block;
-    padding: 10px;
-    vertical-align: middle;
-    /* border: 1px black solid; */
-    /* list-style: none; */
-    margin: 20px;
+  margin-top: 20px;
+  display: inline-block;
+  padding: 10px;
+  vertical-align: middle;
+  /* border: 1px black solid; */
+  /* list-style: none; */
+  margin: 20px;
+  margin-bottom: 10px;
 }
 
 .likeBtn {
-    margin-top: 10px;
-    cursor: grabbing;
+  margin-top: 5px;
+  cursor: grabbing;
+}
+
+.likeP {
+  display: inline-block;
+  margin-left: 5px;
 }
