@@ -16,13 +16,13 @@ class GalleryItem extends Component {
   render() {
     let displayedState = this.state;
     if (this.state.isCLicked === !false) {
-      displayedState = <p>{this.props.item.description}TESTitemDesc</p>;
+      displayedState = <p>{this.props.item.description}</p>;
     } else {
       displayedState = (
         <img src={this.props.item.path} alt={this.props.item.description} />
       );
     }
-
+    //TODO style description div/ image div
     return (
       <div className="box">
         <h6>{this.props.item.title}</h6>
