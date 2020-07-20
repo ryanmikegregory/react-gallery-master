@@ -7,14 +7,14 @@ class GalleryItem extends Component {
     isCLicked: false,
   };
 
-  toggleImageDesc (event) {
-
-    console.log("CLICKITY");
-  }
+  toggleImageDesc = () => {
+    this.setState({
+      isCLicked: !this.state.isCLicked,
+    });
+    console.log('CLICKITY');
+  };
   render() {
     let displayedState = this.state;
-    console.log(displayedState);
-
     if (this.state.isCLicked === !false) {
       displayedState = <p>{this.props.item.description}TESTitemDesc</p>;
     } else {
@@ -23,13 +23,10 @@ class GalleryItem extends Component {
       );
     }
 
-    console.log(this.props);
     return (
       <div className="box">
         <h6>{this.props.item.title}</h6>
-        <div>
-          <button onClick={this.toggleImageDesc}>{displayedState}</button>
-        </div>
+        <div onClick={this.toggleImageDesc}>{displayedState}</div>
         <div>
           <button
             className="likeBtn btn"

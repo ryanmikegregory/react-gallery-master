@@ -10,7 +10,7 @@ class App extends Component {
   };
 
   componentDidMount() {
-    console.log('We did da Mount!');
+    console.log('Mount');
     this.getGalleryData();
   }
 
