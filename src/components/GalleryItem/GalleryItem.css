@@ -11,7 +11,12 @@
 
 .likeBtn {
   margin-top: 5px;
+  margin-right: 5px;
   cursor: grabbing;
+  border-radius: 6px;
+  border: none;
+  box-shadow: 3px 3px 3px 1px rgb(0, 0, 0, 0.3);
+  color: #9db758;
 }
 
 .likeP {

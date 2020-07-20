@@ -13,7 +13,7 @@ class GalleryItem extends Component {
         <p>{this.props.item.description}</p>
         <div>
           <button
-            className="likeBtn"
+            className="likeBtn btn"
             onClick={this.props.updateLikes(this.props.item.id)}
           >
             LIKE
