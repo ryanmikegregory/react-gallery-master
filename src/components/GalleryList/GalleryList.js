@@ -9,7 +9,6 @@ class GalleryList extends Component {
           key={index}
           item={item}
           updateLikes={this.props.updateLikes}
-          description={item.description}
         />
       );
     });
@@ -19,5 +18,3 @@ class GalleryList extends Component {
 }
 
 export default GalleryList;
-
-

@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 import './GalleryItem.css';
-import GalleryImage from '../GalleryImage/GalleryImage';
+
 
 class GalleryItem extends Component {
   render() {
     return (
       <div className="box">
         <h4>{this.props.item.title}</h4>
-        <GalleryImage
-          img={this.props.item.path}
-          // description={this.props.description}
-        />
+        
+          <img src={this.props.item.path}></img>
+          
 
         <p>{this.props.item.description}</p>
         <div>
