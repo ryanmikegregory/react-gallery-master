@@ -59,7 +59,6 @@ class App extends Component {
         </header>
         <br />
         <div className="container">
-          <h1>Gallery</h1>
           <GalleryList
             galleryList={this.state.galleryItemsArray}
             updateLikes={this.updateLikes}
