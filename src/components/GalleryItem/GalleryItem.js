@@ -16,16 +16,20 @@ class GalleryItem extends Component {
   render() {
     let displayedState = this.state;
     if (this.state.isCLicked === !false) {
-      displayedState = <p>{this.props.item.description}</p>;
+      displayedState = (
+        <div>
+          <h5>{this.props.item.title}</h5>
+          <p>{this.props.item.description}</p>
+        </div>
+      );
     } else {
       displayedState = (
         <img src={this.props.item.path} alt={this.props.item.description} />
       );
     }
-    //TODO style description div/ image div
+    //TODO style description div/ image divpg-
     return (
       <div className="box">
-        <h6>{this.props.item.title}</h6>
         <div onClick={this.toggleImageDesc}>{displayedState}</div>
         <div>
           <button
